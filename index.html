@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Craps Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <div id="ui-container">
+        <div class="header">
+            <h1>Craps Simulator</h1>
+        </div>
+        <div id="game-info">
+            <div class="info-box">
+                <h2>Wallet</h2>
+                <p>$<span id="wallet-amount">1000</span></p>
+            </div>
+            <div class="info-box">
+                <h2>Current Bet</h2>
+                <p>$<span id="bet-amount">0</span></p>
+            </div>
+            <div class="info-box">
+                <h2>Point</h2>
+                <p><span id="point-value">OFF</span></p>
+            </div>
+        </div>
+        <div id="message-box">
+            <p id="message">Place your Pass Line bet to start.</p>
+        </div>
+        <div id="controls">
+            <div id="betting-controls">
+                <input type="number" id="bet-input" value="50" min="1">
+                <button id="bet-button">Place Bet</button>
+            </div>
+            <button id="roll-button" disabled>Roll Dice</button>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "cannon-es": "https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js"
+            }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
